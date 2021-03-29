@@ -1,4 +1,4 @@
-package com.spring.batch.learnspringbatch.configuration;
+package com.spring.batch.learnspringbatch.configuration.step;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
