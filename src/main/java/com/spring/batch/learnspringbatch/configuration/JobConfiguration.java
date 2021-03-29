@@ -24,8 +24,8 @@ public class JobConfiguration {
 	private StepBuilderFactory stepBuilderFactory;
 
 	@Bean
-	public Step step1() {
-		return stepBuilderFactory.get("step1").tasklet(new Tasklet() {
+	public Step step0() {
+		return stepBuilderFactory.get("step0").tasklet(new Tasklet() {
 			@Override
 			public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
 				System.out.println("Hello World");
@@ -36,7 +36,7 @@ public class JobConfiguration {
 
 	@Bean
 	public Job helloWorldJob() {
-		return jobBuilderFactory.get("helloWorldJob").start(step1()).build();
+		return jobBuilderFactory.get("helloWorldJob").start(step0()).build();
 	}
 
 }
