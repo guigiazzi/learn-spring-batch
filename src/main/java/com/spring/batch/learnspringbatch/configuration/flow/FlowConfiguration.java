@@ -34,7 +34,7 @@ public class FlowConfiguration {
 	}
 
 	@Bean
-	public Flow myFlow() {
+	public Flow myFlow() { // creates e Flow containing steps
 		FlowBuilder<Flow> flowBuilder = new FlowBuilder<>("myFlow");
 		
 		flowBuilder.start(flowFoo1())

@@ -43,7 +43,7 @@ public class StepTransitionConfiguration {
 	}
 
 	@Bean
-	public Job simpleNextTransitionJob() {
+	public Job simpleNextTransitionJob() { // creates a Job containing step transitions using next
 		return jobBuilderFactory.get("simpleNextTransitionJob")
 				.start(step1())
 				.next(step2())
@@ -52,7 +52,7 @@ public class StepTransitionConfiguration {
 	}
 	
 	@Bean
-	public Job OnStatusTransitionJob() {
+	public Job OnStatusTransitionJob() { // creates a Job containing step transitions using .on(STATUS).to(step)
 		return jobBuilderFactory.get("onStatusTransitionJob")
 				.start(step1())
 				.on("COMPLETED").to(step2())

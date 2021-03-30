@@ -30,7 +30,7 @@ public class FlowRunsBeforeStepConfiguration {
 	}
 
 	@Bean
-	public Job flowRunsBeforeStep(Flow flow) { // in this example, flow is running before the step
+	public Job flowRunsBeforeStep(Flow flow) { // creates a Job where the flow is running before the step
 		return jobBuilderFactory.get("flowRunsBeforeStep")
 				.start(flow)
 				.next(runsAfterFlowStep())

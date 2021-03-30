@@ -30,7 +30,7 @@ public class FlowRunsAfterStepConfiguration {
 	}
 
 	@Bean
-	public Job flowRunsAfterStep(Flow flow) { // in this example, flow is running after the step
+	public Job flowRunsAfterStep(Flow flow) { // creates a Job where the flow is running after the step
 		return jobBuilderFactory.get("flowRunsAfterStep")
 				.start(runsBeforeFlowStep())
 				.on("COMPLETED").to(flow)

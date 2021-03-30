@@ -35,7 +35,7 @@ public class JobConfiguration {
 	}
 
 	@Bean
-	public Job helloWorldJob() {
+	public Job helloWorldJob() { // creates a basic Job containing a step
 		return jobBuilderFactory.get("helloWorldJob").start(step0()).build();
 	}
 
